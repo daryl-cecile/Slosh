@@ -1,0 +1,6 @@
+ui-inputbox{
+	display: inline-flex;
+	font-family: sans-serif;
+	letter-spacing: 1px;
+	cursor: text;
+}

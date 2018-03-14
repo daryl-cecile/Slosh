@@ -4,7 +4,7 @@ Slosh is a set of advanced Javascript-based UI elements. This project is still u
 
 ### Current Elements:
 	- UIInputBox (input box with hint)
-	 ![UI_inputbox_preview](UI_inputbox_preview.png)
+![UI_inputbox_preview](UI_inputbox_preview.png)
 
 ### Currently WIP:
 	- UITextbox (like input box but multi-line)

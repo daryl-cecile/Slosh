@@ -4,11 +4,16 @@ Slosh is a set of advanced Javascript-based UI elements. This project is still u
 
 ### Current Elements:
 - UIInputBox (input box with hint)
+
 ![UI_inputbox_preview](UI_inputbox_preview.png)
+
+- UIImage (progressive blur-in image)
+
+![UI_inputbox_preview](UI_image_preview.png)
+
 
 ### Currently WIP:
 - UITextbox (like input box but multi-line)
-- UIImage (progressive blur-in image)
 - Documentation
 
 

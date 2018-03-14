@@ -3,4 +3,14 @@ ui-inputbox{
 	font-family: sans-serif;
 	letter-spacing: 1px;
 	cursor: text;
+	overflow: hidden;
+}
+
+ui-image{
+	display: inline-block;
+	overflow: hidden;
+}
+
+ui-canvas-hd{
+	display: inline-block;
 }

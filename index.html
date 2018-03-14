@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <title>TEST UI</title>
 
-    <script src="library/slosh.js"></script>
-    <script src="library/UIInputBox.js"></script>
+    <script src="library/LoadHelper.js"></script>
+    <script>
+        LoadHelper.setOption('autoUpgradeCanvas',false); // prevent auto upgrade of canvas
+        LoadHelper.loadComponent('UIInputBox');
+        LoadHelper.loadComponent('UIImage');
+        LoadHelper.loadComponent('UICanvas'); // Only useful to fix retina display canvas
+    </script>
 
     <link rel="stylesheet" href="library/defaultStyle.css">
 </head>
 <body>
+
+    <ui-image src="https://source.unsplash.com/random/1280x800?nature" thumb="https://source.unsplash.com/random/128x80?nature"></ui-image>
+
     <ui-inputbox value="hell" hint="hello world"></ui-inputbox>
+
 </body>
 </html>

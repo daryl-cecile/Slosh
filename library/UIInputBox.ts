@@ -84,7 +84,7 @@ class UIInputBox extends SloshBaseUI{
         },500);
     }
 
-    connectedCallback(){
+    initialize(){
         this.tabIndex = 0;
         this.invalidate();
     }
@@ -366,7 +366,9 @@ class UIInputBox extends SloshBaseUI{
 
             // draw hint
             this.canvasContext.fillStyle = styles.getPropertyValue('color');
-            this.canvasContext.fillText(this.hint, padd_left, padd_top);
+            if ( this.hint.indexOf(this.content) === 0 ){
+                this.canvasContext.fillText(this.hint, padd_left, padd_top);
+            }
             this.canvasContext.globalAlpha = 1;
 
             // draw text

@@ -91,6 +91,7 @@ class SloshBaseUI extends SloshEventEmitter {
         this._padding_horizontal = 2;
         this.canvas = document.createElement('canvas');
         this.canvasContext = this.canvas.getContext('2d');
+        this._style = document.createElement('style');
         this.PPI = window.devicePixelRatio;
         this.setBase(this);
         this.on('render', () => {
@@ -100,6 +101,7 @@ class SloshBaseUI extends SloshEventEmitter {
         });
         let shadow = this.attachShadow({ mode: 'closed' });
         shadow.appendChild(this.canvas);
+        shadow.appendChild(this._style);
         this.canvas.style.letterSpacing = 'normal';
     }
     get padding_vertical() {
@@ -113,6 +115,17 @@ class SloshBaseUI extends SloshEventEmitter {
     }
     set padding_horizontal(v) {
         this._padding_horizontal = v;
+    }
+    get Style() {
+        return this._style.innerHTML;
+    }
+    set Style(v) {
+        this._style.innerHTML = v;
+    }
+    connectedCallback() {
+        this.initialize();
+    }
+    initialize() {
     }
     invalidate() {
         this.isDirty = true;

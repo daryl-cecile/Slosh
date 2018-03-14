@@ -110,6 +110,8 @@ class SloshBaseUI extends SloshEventEmitter{
     protected width:number;
     protected height:number;
 
+    private _style:HTMLStyleElement = document.createElement('style');
+
     protected get padding_vertical():number{
         return this._padding_vertical;
     }
@@ -137,7 +139,25 @@ class SloshBaseUI extends SloshEventEmitter{
 
         let shadow = this.attachShadow({mode: 'closed'});
         shadow.appendChild( this.canvas );
+        shadow.appendChild( this._style );
         this.canvas.style.letterSpacing = 'normal';
+
+    }
+
+    protected get Style():string{
+        return this._style.innerHTML;
+    }
+
+    protected set Style(v:string){
+        this._style.innerHTML = v;
+    }
+
+    connectedCallback(){
+        this.initialize();
+    }
+
+    protected initialize(){
+
     }
 
     protected invalidate(){
